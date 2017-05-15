@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/home', (req, res) => {
-
+    res.render('home');
 });
 
 app.get('/login', (req, res) => {
@@ -39,7 +39,7 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
-app.post('/control', (req, res) => {
+app.post('/control-login', (req, res) => {
     var sess = req.session
     var num1 = req.body.nombre;
     var num2 = req.body.pass;
@@ -66,7 +66,7 @@ app.post('/control', (req, res) => {
     });
 });
 
-app.post('/procesar', (req, res) => {
+app.post('/procesar-register', (req, res) => {
     var name = req.body.username;
     var pass = req.body.pass;
     var repass = req.body.repass;
